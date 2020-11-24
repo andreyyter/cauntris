@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страны</title>
+    <style>
+        body{
+            background-color: black;
+            color: blanchedalmond;
+            margin: 0;
+        }
+        h2{
+            text-align: right;
+            margin-right: 150px;
+        }
+        img{
+            height: 150px;
+        }
+        #photo{
+            display: flex;
+            justify-content: space-around;
+        }
+        #info{
+            display: flex;
+            justify-content: space-around;
+            font-size: 25px;
+        }
+        button{
+            margin: 50px;
+            font-size: 35px;
+            padding: 15px;
+            transition: 2s;
+            
+        }
+        button:hover{
+            background-color: darkgreen;
+            color: darkorange;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+    Название 
+    Площадь
+    Население
+    Деньги
+    Столица
+    Глава 
+    Флаг
+    Карта
+
+      -->
+    <h1>Страны</h1>
+    
+    <hr size="5" color="blue">
+    <h2 id="name"> Россия </h2>
+    <div id="photo">
+        <img id="main" src="https://www.oblgazeta.ru/media/filer_public/2020/01/15/97274d23-38cd-40a7-93e0-a1d937fbc339-%D0%9F%D1%83%D1%82%D0%B8%D0%BD_%D1%84%D0%B5%D0%B4%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D0%BD%D0%B8%D0%B5_1.jpg.1024x0_q85.jpg" alt="">
+        <img id="flagtrue" src="https://rpgu.rkursk.ru/documents/10197/0/101+-+%D1%84%D0%BB%D0%B0%D0%B3+%D0%A0%D0%A4.jpg/7c83013d-fd70-4d92-bb3f-1b82dbf364f5?t=1566458875127" alt="">
+        <img id="flag" src="https://lh3.googleusercontent.com/proxy/RPqujoNcTd8Gjowbl_AeisY-c-UVujKp_a9UDJgXQhkDZR5z_I6Xqwy52ovl5ZT_c_ne3TE5NPxuJ8MBMWY8YfCqsERSGXlnLjW4DEw" alt="">
+    </div>
+    <div id="info">
+        <ul>
+            <li id="ploshad"> 17,1 млн км2 </li>
+            <li id="zeze"> 147 млн. человек </li>
+        </ul>
+        <ul>
+            <li id="nane"> Президент Путин В.В. </li>
+            <li id="stol"> Москва </li>
+        </ul>
+        <ul>
+            <li id="mani"> Д: Русские Рубли </li>            
+        </ul>
+    </div>
+
+<hr  size="5" color="blue">
+<button id="urugl">Уругвай</button>
+
+    <script>
+        document.getElementById('urugl').
+        addEventListener('click',urugl)
+        function urugl(){
+            document.getElementById('name').
+            innerHTML='Уругвай'
+            document.getElementById('ploshad').
+            innerHTML='176 215 км2'
+            document.getElementById('main').
+            src='data:image/jpeg;base64,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'
+            document.getElementById('nane').
+            innerHTML='Луис Альберто Локалле'
+            document.getElementById('flag').
+            src='https://upload.wikimedia.org/wikipedia/ru/thumb/8/8a/%D0%A3%D1%80%D1%83%D0%B3%D0%B2%D0%B0%D0%B9.png/350px-%D0%A3%D1%80%D1%83%D0%B3%D0%B2%D0%B0%D0%B9.png'
+            document.getElementById('flagtrue').
+            src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAACnCAMAAAAPIrEmAAAA3lBMVEX///8AOKiNptjj6fWqveLG0+z80RZ7PwCXrtyaYgWQVwSKUAOgaQaARQHouxP7+viUWwSMUwPZqRDx6uPyxhSqdAjp39Tg0sP3zBX18ezjtBL59/TerxGsdgilbgetg06JUQ2tg0a7iAvm28/Uow+XYiDvwhSFSgK6lmK5mHTYxrGPWRPAn3GwgCTGqH6LUxKmdzC6ih+0gAqebjHFlhvKr4uleT7Uv6ONWB62lGmzjFmbaBuneDjR2+/LmxqgcTTJr5KsfCrTvai0jVSwhUHAkR2ZaDKth1ipeCC/ooQnxRydAAAISElEQVR4nO2dbXeiuhaAvXfuTS4vQRQURLFIwThiq1LUvl2q1U47//8PnSTgqB2dzqfSSJ61ZhktsnjYyc4m4DmVikAgEAgEAoFAcP5cFn0AxfG96AMojGZY9BF8KsO99gLt/8Vof/KhfDKt2703F9DYNqt33rn3/gtv702Itn3g0sP3BRzNpzJ+2HsT6aOsYWD5sZDD+UywupvQWp7ay1qh0rA+/u7///2V+Vhd2oXXQuqKNQysX7U+Vv/fv74yHx7+WPZH2/YIqlcsq99B6ap6nurGzusC6ekgbz9BNWHdP4TdqXHiC5yrt1+b22bLU9x6LzMLodqZkdeqp/jJfk07W55N1Mmovt42X6Fcdx6ZuwdVc01el0gOgl2pY4Th8d7PpXrlHt7kPbrqQb3v0MzexFAFG9KIoK4Fz9tNlwg1j++ET/XqWHlYZM07iFVQJ7luAYk6SfHPCOpgG/X2HOHZiZ3wqU5CLCe9Vh52OQBTi5SxRH1qVMf0Nc3m9WGEpJPFDafqlRGSnRULbQihbtoT+qqSaM8RxD5g83r1HqPum3FqF7yqE1PZTNZkHv8OoeKDYBFRde0JQyh3aMevXEYINZLFyT1wq26Qjm5qE6vSRCTsNph4VB3UIHkHbJL3Rh5EXa13eg/cqldmiLjb00GbxLmWAB8xdR1CHJM+YISImIPVHwpaftUrN6Rrm6BDw00C7UOmrpIPNbCakQ+J+cvwD9/nSv2wIG15zN3ssuGtZurkDEigHyFm7uQX7c2bseeF708DV+qtHweLTgvM3EFQg6ihZ+odJNcDOuCJuT1hmxs3GOmSGqHXw2TPlXplHB4c/Rxm7qaEdIW0JRuYivSGM3M62ZPTNcdQVqf3v5d0fKk/44f19Wy03mw265nVbkd0mBN3kCiKLHXj2HVr9DNm3hlVm3chhkhOr46Neb7UK6Ei+YFmE1nbSa961zhzN/2GAxh2KmfjHJiyh+mfa5L2cnRy50y9fYtqui51/YDG2g7oCIe6083FGT6GxBx0IQu/HNvB6Ig4Kfa+fWWOHPDPiIZSkXUpJr42696SCfapkwoHBHQzEnIHBOezONv6GTItLOt+38lmuEMCH5g0y9f0lKSBwce75IjqnQcze3eKFA2YSTfuZxHvxnUAYk2lZyYgI/7tdBHPKdU5zuW9LkjUJEhdImrHfpDGqmZKsu7S8fDSO3nhxjG0oIGYJD0SdDtxu2nHBo4Tu3HdtkFDiaQ4mD7+xXI8b7St2XpC5Egvb9BMn0JU19goh3JKwl1HNLtjL5zPrL9Yl+YEYzjarK5ojLOJPGaznOTSV+DEqtuhHyhwC4rC8H7Ieb+nod6spoG2n837fnYGtu/zhgwP4LsDXH6/pWNbfkfNB8eQfoNUeejH8i9uSH1Jqs3ZPIwUdBBQ91clk/9juHunwdbS6WozWJxYlOYIYzh4Cj28VVdzP1/yHVfv7GUAOhzqL1eT3rXFa7CPQTtApNAOIOcx7wMnNe1OVtkEAQl1Q9LXZxDq37EeX+x+ED/UOll266dBPa3bWZ5TdYV1C+8MJ/ZWLyGOHVeXdTKxA81xpa7rNrpS4pDPNUWS82rvgtOsfpLhinTsOs3aipMENM4adVellAVdgjhw5RqT917PaaBXllN6aUrnbkTmtoaWJ3Inn/FjkgIi20wlmVU2OHo9m+coZy+g382KFp3mNDlbqejnFZ7P/kSXK/qJquvUH4+vP94tB1hTEOjZUFZov1fonaddeecGGu3q+CFh2V4L/K6ky+jp/W6+/ecrc9TcWJkNmdam4yhKmTldh8o8QafhkgZzj6x7Wus7Tj19mcYSvnu3H87W5gjNSV1XIA6X7YrxlptDD3dj15X0GlJqCcjdb2jZv5zNFlbTsAYPuM2xestoWoO3hg5x9lDFYz+PeZTIEhGmbVVGqpm5o4OHCi7Ru7BzpW7dIkXXMQ6zhH0dZOa4YUusqKNvUp1kgCBz9w4uVZuvHKuTw78Iw6e8QmteZeZRg+R4qJhMHWsuYieDuR8+Jf5ufudMfY/qxKTmeD7SgEouSDtMvQYcOrWFkw51R8dX4HlXv+tQc29RmQCT3onwM/U+kEjYw+pgahN37w9XL9yqW1Nijm9aleYLSGtZCUPUb6agTsIekQ0mGnE/8cwcz+rtSaBAj6bwRZ0+TwBvV0x91DNp2DExbq9fiPvpWy+8qq8TBWV3nAcmfYrEa/WoOrKaUzraEXtkcLGq1/DJy1ZO1Ycq9vJpegMcHaJFhWQ70g9alUEHuEqe21s9vxad+g0Mn+otD0Xbi7ENSJjpMCDqEc38Nkl7OM9vswd0cVbqc7hbgdiABkKkVxtTkAW7+WZ3ZFrFMpohPPEsEZfqy/11pw2Q4Jg2VkSdRfjyzY53Y7w6Gh9fq+BR3fi+P3x7JMtdZOdAgdlt1ctJX0LRry2sn2ejfhjEgaYjNu7XprId4caEXNDvVmbaZ/MriEOuU9ljjWVH8X7JPjbwqfR2PuoDF2Up7TJRdpcrrTf55tQ3zkZ9oufdvH2l7C1CDeT5B1/89t+vzF+YL3YrTyu8d6H2jJ+Pbn8+WNj7lb97aG/OG6Jzu/fwjuaP191EN4J7ud96PbL5OXFQnw+9vTfn/vP1Q4zfltrLw/GqrRRw/qyQQCAQCAQCgeB8KHqtpDgqRa+QFYdQLyNCvYwI9TIi1MuIUC8jQr2MCPUyItTLSJnVi/61WXEUvTQoEAgEAoFAIBAIBAKBQLBP0f/l5uIo89pc0QdQHEK9jAj1MiLUy4hQLyNCvYwI9TIi1MuIUC8jlUL/x/eFUvTSoEAgEAgEAoFAIBAIBAKBgPIPloscr4nhWrwAAAAASUVORK5CYII='
+            document.getElementById('zeze').
+            innerHTML='3,449млн'
+            document.getElementById('stol').
+            innerHTML='Монтевидео'
+            document.getElementById('mani').
+            innerHTML='Уругвайское песо'
+       
+        }
+    </script>
+
+<hr  size="5" color="red">
+<button id="urug">Восточный-Тимор</button>
+
+    <script>
+        document.getElementById('urug').
+        addEventListener('click',urug)
+        function urug(){
+            document.getElementById('name').
+            innerHTML='Восточный-Тимор'
+            document.getElementById('ploshad').
+            innerHTML=' 30 800 км²'
+            document.getElementById('main').
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Man_in_traditional_dress%2C_East_Timor.jpg/220px-Man_in_traditional_dress%2C_East_Timor.jpg'
+            document.getElementById('nane').
+            innerHTML='	Франсишку Гутерриш'
+            document.getElementById('flag').
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Sprachen_Osttimors-en.png/220px-Sprachen_Osttimors-en.png'
+            document.getElementById('flagtrue').
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/240px-Flag_of_East_Timor.svg.png'
+            document.getElementById('zeze').
+            innerHTML='3,449млн'
+            document.getElementById('stol').
+            innerHTML='Дили'
+            document.getElementById('mani').
+            innerHTML='нумизиатская монета'
+       
+        }
+    </script>    
+
+    
+</body>
+</html>
